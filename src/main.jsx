@@ -23,21 +23,23 @@ const router = createBrowserRouter([
       {
         path: "/applied",
         element: <Applied></Applied>,
-        loader: () => fetch('/jobs.json')
+        loader: () => fetch("/jobs.json"),
       },
       {
         path: "/jobs",
-        element: <Jobs></Jobs>
+        element: <Jobs></Jobs>,
+        loader: () => fetch('https://openapi.programming-hero.com/api/phones?search=samsung')
       },
       {
         path: "/blogs",
-        element: <Blogs></Blogs>
+        element: <Blogs></Blogs>,
+        loader: () => fetch("https://jsonplaceholder.typicode.com/posts"),
       },
       {
         path: "/job/:id",
         element: <JobDetails></JobDetails>,
-        loader: () => fetch('../public/jobs.json')
-      }
+        loader: () => fetch("../public/jobs.json"),
+      },
     ],
   },
 ]);
