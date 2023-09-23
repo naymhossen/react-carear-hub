@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 /* eslint-disable react/prop-types */
 const Phone = ({ phone }) => {
     const {brand, image, phone_name, slug} = phone;
-  console.log(phone);
+//   console.log(phone);
   return (
     <div>
         <div className="border rounded-xl bg-white p-5">
